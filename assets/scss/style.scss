@@ -1,0 +1,52 @@
+/*
+------------- Table of content ----------------
+
+Template Name: easy-dental-care  Responsive  HTML5 Template
+Template URI: https://easy-dental-care.com/
+Description: easy-dental-care  Responsive  HTML5 Template
+Author: Gobinda Sarkar
+Author URI: https://easy-dental-care.com/
+Version: 1.0
+
+---------------------- common content ----------
+1.body reset content
+#.header-area
+#.footer-area
+#.primary-btn
+#.hero-banner-area
+#.book-appointment-area
+#.about-area
+#.counter-area
+#.section-title
+#.service-area
+#.reviews-area
+
+
+
+
+*/
+/*===============================
+#.reviews-area
+=================================*/
+
+// variable
+@import "variable/_variable.scss";
+
+// mixin
+@import "mixin/_mixin.scss";
+
+// body reset content
+@import "reset/_predefine.scss";
+
+// component content
+@import "component/header.scss";
+@import "component/footer.scss";
+@import "component/primary-btn";
+@import "component/hero-banner-area";
+@import "component/book-appointment-area";
+@import "component/about-area";
+@import "component/counter-area";
+@import "component/section-title";
+@import "component/service-area";
+@import "component/reviews-area";
+

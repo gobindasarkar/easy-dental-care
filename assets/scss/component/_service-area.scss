@@ -1,0 +1,97 @@
+/*===============================
+#.service-area
+=================================*/
+.service-area {
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .single-service {
+      border-top: 1px solid var(--primary-color);
+      border-right: 1px solid var(--primary-color);
+      overflow: hidden;
+      position: relative;
+      &:nth-child(1),&:nth-child(2),&:nth-child(3) {
+        border-top: none;
+      }
+      &:nth-child(3n) {
+        border-right: none;
+      }
+      .service-inner {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 3rem;
+        grid-gap: 3rem;
+        min-height: 237px;
+        .serice-info {
+            flex: 1;
+        }
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 2.8rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 6.8rem;
+            height: 6.8rem;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 2rem;
+            outline: 1px solid var(--primary-color);
+            outline-offset: 3px;
+        }
+      }
+      .flip-card-front {
+        transition: $transition;
+      }
+      .flip-card-back {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 100%;
+        background-color: var(--primary-color);
+        h3 {
+            color: var(--white);
+        }
+        .icon {
+            background-color: var(--white);
+            color: var(--primary-color);
+            outline: 1px solid var(--white);
+        }
+      }
+      .learn-btn {
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: var(--white);
+        border-bottom: 2px solid var(--white);
+        transition: $transition;
+        &:hover {
+            color: var(--bColor);
+            border-color: var(--bColor);
+        }
+      }
+      
+      &:hover {
+        .flip-card-back {
+          opacity: 1;
+          visibility: visible;
+          top: 0;
+        }
+        .flip-card-front {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
