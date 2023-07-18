@@ -20,14 +20,15 @@ Version: 1.0
 #.section-title
 #.service-area
 #.reviews-area
+#.team-area
+#.blog-area
+#.contact-area
 
 
 
 
 */
-/*===============================
-#.reviews-area
-=================================*/
+
 
 // variable
 @import "variable/_variable.scss";
@@ -49,4 +50,7 @@ Version: 1.0
 @import "component/section-title";
 @import "component/service-area";
 @import "component/reviews-area";
+@import "component/team-area";
+@import "component/blog-area";
+@import "component/contact-area";
 

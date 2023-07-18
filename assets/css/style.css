@@ -20,14 +20,14 @@ Version: 1.0
 #.section-title
 #.service-area
 #.reviews-area
+#.team-area
+#.blog-area
+#.contact-area
 
 
 
 
 */
-/*===============================
-#.reviews-area
-=================================*/
 :root {
   font-size: 62.5%;
   --primary-color: #1A9FDA;
@@ -939,6 +939,12 @@ scrollUp
   right: 0;
   margin: 0 auto;
 }
+.section-title.text-white .title {
+  color: var(--white);
+}
+.section-title.text-white .title:before {
+  background-color: var(--white);
+}
 
 /*===============================
 #.service-area
@@ -1126,4 +1132,236 @@ scrollUp
 }
 .reviews-area .slick-arrow.slick-next {
   right: -5%;
+}
+
+/*===============================
+#.team-area
+=================================*/
+.team-area {
+  position: relative;
+  z-index: 1;
+}
+.team-area::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: rgba(18, 128, 178, 0.9);
+}
+
+/*===============================
+#.blog-area
+=================================*/
+.blog-area .single-blog .blog-thumbnail a {
+  display: block;
+  overflow: hidden;
+}
+.blog-area .single-blog .blog-thumbnail a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear;
+}
+.blog-area .single-blog .blog-meta {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  grid-gap: 2rem;
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+  z-index: 10;
+}
+.blog-area .single-blog .blog-meta .blog-meta-right {
+  flex: 1;
+}
+.blog-area .single-blog .blog-meta .blog-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 102px;
+  height: 134px;
+  background-color: var(--primary-color);
+}
+.blog-area .single-blog .blog-meta .blog-date .month {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--white);
+}
+.blog-area .single-blog .blog-meta .blog-date .date {
+  margin-bottom: 1rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+}
+.blog-area .single-blog .blog-meta .blog-date .year {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--white);
+}
+.blog-area .single-blog .blog-meta .social-share {
+  display: flex;
+  grid-column-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.blog-area .single-blog .blog-meta .social-share li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--bColor);
+  color: var(--bColor);
+  transition: all 0.5s linear;
+}
+.blog-area .single-blog .blog-meta .social-share li a:hover {
+  color: var(--white);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.blog-area .single-blog .blog-meta .post-author {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.blog-area .single-blog .post-title {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--bColor);
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.blog-area .single-blog .post-title::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 3px;
+  background: var(--primary-color);
+  left: 0;
+  bottom: 0;
+}
+.blog-area .single-blog .post-title a {
+  color: var(--bColor);
+  transition: all 0.5s linear;
+}
+.blog-area .single-blog .post-title a:hover {
+  color: var(--primary-color);
+}
+.blog-area .single-blog p {
+  font-size: 1.6rem;
+  color: var(--bColor);
+}
+.blog-area .single-blog .read-more-btn {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  transition: all 0.5s linear;
+}
+.blog-area .single-blog .read-more-btn:hover {
+  color: var(--hover-color);
+}
+.blog-area .single-blog:hover .blog-thumbnail a img {
+  transform: scale(1.2);
+}
+
+/*===============================
+#.contact-area
+=================================*/
+.contact-area {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 850px;
+}
+.contact-area .google-map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+}
+
+.appointment-form-area .single-input {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.appointment-form-area .single-input .input-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.appointment-form-area .single-input .appointment-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: none;
+  border-bottom: 2px solid #636363;
+  font-family: "Roboto Serif", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--bColor);
+}
+.appointment-form-area .form-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--bColor);
+  margin-bottom: 3rem;
+}
+
+.call-btn {
+  display: flex;
+  grid-column-gap: 2rem;
+}
+.call-btn .btn-icon i {
+  font-size: 5rem;
+  color: var(--primary-color);
+}
+.call-btn .btn-info {
+  flex: 1;
+}
+.call-btn .btn-info span {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--bColor);
+  margin-bottom: 0.5rem;
+}
+.call-btn .btn-info h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--bColor);
+}
+
+.address-area .address-top {
+  margin-bottom: 2rem;
+}
+.address-area .address-top h2 {
+  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--bColor);
+}
+.address-area .single-address {
+  display: flex;
+  grid-column-gap: 2rem;
+  margin-bottom: 2rem;
+}
+.address-area .single-address:last-child {
+  margin-bottom: 0;
+}
+.address-area .single-address .address-icon {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+.address-area .single-address .address-info {
+  flex: 1;
+}
+.address-area .single-address .address-info p {
+  font-size: 1.6rem;
+  color: var(--bColor);
 }/*# sourceMappingURL=style.css.map */
