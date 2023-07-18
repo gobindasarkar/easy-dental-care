@@ -123,6 +123,27 @@
         },
       ],
     });
+    /*-------------------------------------------
+      team slider active
+    --------------------------------------------- */
+    $(".team-slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      fade: true,
+      asNavFor: ".team-thumbnail-slider",
+    });
+    $(".team-thumbnail-slider").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: ".team-slider",
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true,
+      vertical: true,
+    });
+
     //google map activation
     //-----------------------------------
     if ($("#gmap").length > 0) {
