@@ -324,16 +324,6 @@ scrollUp
   margin-left: 12px;
 }
 
-.main-content {
-  margin-top: -6rem;
-}
-
-.content-wrap {
-  background-color: var(--white);
-  border-radius: 1.5rem;
-  padding: 3.5rem;
-}
-
 .preloader {
   position: fixed;
   top: 0;
@@ -786,6 +776,28 @@ scrollUp
   right: 10%;
 }
 
+@media (max-width: 1199px) {
+  .hero-banner-area .single-banner .banner-subtitle {
+    font-size: 2.8rem;
+  }
+  .hero-banner-area .single-banner .banner-title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 991px) {
+  .hero-banner-area .single-banner {
+    text-align: center;
+    padding-bottom: 7rem;
+  }
+  .hero-banner-area .single-banner .banner-image {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 575px) {
+  .hero-banner-area .single-banner .banner-title {
+    font-size: 4rem;
+  }
+}
 /*===============================
 #.book-appointment-area
 =================================*/
@@ -844,6 +856,22 @@ scrollUp
   background-color: var(--hover-color);
 }
 
+@media (max-width: 1199px) {
+  .book-appointment-area .appointment-input-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .book-appointment-area .appointment-input-group {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .book-appointment-area .appointment-input-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /*===============================
 #.about-area
 =================================*/
@@ -852,7 +880,8 @@ scrollUp
   align-items: center;
   position: relative;
   min-height: 680px;
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
+  overflow: hidden;
 }
 .about-area .about-left-image {
   position: absolute;
@@ -878,16 +907,34 @@ scrollUp
   color: var(--bColor);
 }
 
+@media (max-width: 991px) {
+  .about-area {
+    flex-direction: column;
+    padding-bottom: 7rem;
+  }
+  .about-area .about-left-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .about-area h2 {
+    font-size: 4.2rem;
+  }
+}
 /*===============================
 #.counter-area
 =================================*/
 .counter-area {
-  padding: 6rem 0;
+  padding: 6rem 0 3rem 0;
 }
 .counter-area .single-counter {
   display: flex;
   align-items: center;
   grid-gap: 2rem;
+  margin-bottom: 3rem;
 }
 .counter-area .single-counter .counter-icon {
   display: inline-flex;
@@ -900,6 +947,9 @@ scrollUp
   font-size: 4rem;
   color: var(--white);
 }
+.counter-area .single-counter .counter-info {
+  flex: 1;
+}
 .counter-area .single-counter .counter-info h2 {
   margin-bottom: 0.7rem;
   font-size: 3.2rem;
@@ -911,6 +961,13 @@ scrollUp
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  .counter-area .single-counter .counter-icon {
+    width: 7rem;
+    height: 7rem;
+    font-size: 3rem;
+  }
+}
 /*===============================
 #.section-title
 =================================*/
@@ -946,6 +1003,11 @@ scrollUp
   background-color: var(--white);
 }
 
+@media (max-width: 767px) {
+  .section-title .title {
+    font-size: 3.2rem;
+  }
+}
 /*===============================
 #.service-area
 =================================*/
@@ -967,7 +1029,6 @@ scrollUp
 }
 .service-area .service-list .single-service .service-inner {
   display: flex;
-  flex-flow: row wrap;
   padding: 3rem;
   grid-gap: 3rem;
   min-height: 237px;
@@ -1039,9 +1100,33 @@ scrollUp
   visibility: hidden;
 }
 
+@media (max-width: 1199px) {
+  .service-area .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-area .service-list .single-service {
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+  }
+}
+@media (max-width: 767px) {
+  .service-area .service-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service-area .service-list .single-service .service-inner .icon {
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+  .service-area .service-list .single-service .service-inner {
+    padding: 2rem;
+  }
+}
 /*===============================
 #.reviews-area
 =================================*/
+.reviews-area {
+  overflow: hidden;
+}
 .reviews-area .single-review .review-image {
   width: 155px;
   height: 155px;
@@ -1134,12 +1219,30 @@ scrollUp
   right: -5%;
 }
 
+@media (max-width: 1199px) {
+  .reviews-area .slick-arrow.slick-prev {
+    left: 1rem;
+  }
+  .reviews-area .slick-arrow.slick-next {
+    right: 1rem;
+  }
+  .reviews-area .slick-arrow {
+    opacity: 0;
+  }
+  .reviews-area:hover .slick-arrow {
+    opacity: 1;
+  }
+  .reviews-area .single-review .review-title {
+    font-size: 2.8rem;
+  }
+}
 /*===============================
 #.team-area
 =================================*/
 .team-area {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .team-area::before {
   position: absolute;
@@ -1215,6 +1318,38 @@ scrollUp
   background-color: var(--primary-color);
 }
 
+@media (max-width: 1199px) {
+  .team-thumbnail-slider .single-thumbnail img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .team-slider .single-team-inner .team-thumbnail {
+    width: 100%;
+    max-width: 100%;
+  }
+  .team-slider .single-team-inner {
+    display: block;
+  }
+  .team-slider .single-team-inner .team-info {
+    position: relative;
+    padding: 5rem;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .team-thumbnail-slider .single-thumbnail img {
+    width: auto;
+    height: auto;
+  }
+  .team-slider .single-team-inner .team-info {
+    padding: 3rem;
+  }
+  .team-slider .single-team-inner .team-info h2 {
+    font-size: 2.8rem;
+  }
+}
 /*===============================
 #.blog-area
 =================================*/
@@ -1340,12 +1475,17 @@ scrollUp
   align-items: center;
   position: relative;
   min-height: 850px;
+  overflow: hidden;
 }
-.contact-area .google-map {
+.contact-area .google-map-area {
   position: absolute;
   left: 0;
   top: 0;
   width: 45%;
+  height: 100%;
+}
+.contact-area .google-map-area .google-map {
+  width: 100%;
   height: 100%;
 }
 
@@ -1427,4 +1567,16 @@ scrollUp
 .address-area .single-address .address-info p {
   font-size: 1.6rem;
   color: var(--bColor);
+}
+
+@media (max-width: 991px) {
+  .contact-area {
+    flex-direction: column;
+  }
+  .contact-area .google-map-area {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

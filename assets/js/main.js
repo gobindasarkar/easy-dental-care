@@ -142,6 +142,14 @@
       centerMode: true,
       focusOnSelect: true,
       vertical: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            vertical: false,
+          },
+        },
+      ],
     });
 
     //google map activation

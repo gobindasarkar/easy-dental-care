@@ -2,11 +2,12 @@
 #.counter-area
 =================================*/
 .counter-area {
-    padding: 6rem 0;
+    padding: 6rem 0 3rem 0;
     .single-counter {
         display: flex;
         align-items: center;
         grid-gap: 2rem;
+        margin-bottom: 3rem;
         .counter-icon {
             display: inline-flex;
             align-items: center;
@@ -19,6 +20,7 @@
             color: var(--white);
         }
         .counter-info {
+            flex: 1;
             h2 {
                 margin-bottom: .7rem;
                 font-size: 3.2rem;
@@ -30,5 +32,12 @@
                 margin: 0;
             }
         }
+    }
+}
+@media (max-width: 767px) {
+    .counter-area .single-counter .counter-icon {
+        width: 7rem;
+        height: 7rem;
+        font-size: 3rem;
     }
 }
